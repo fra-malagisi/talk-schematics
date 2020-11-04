@@ -1,0 +1,19 @@
+import {BaseComponent} from './components/base/base.component';
+import {CommonModule} from '@angular/common';
+import {RouterModule} from '@angular/router';
+import {NgModule} from '@angular/core';
+
+
+@NgModule({
+    imports: [
+        CommonModule,
+        RouterModule,
+    ],
+    declarations: [
+        BaseComponent
+    ],
+    exports: [
+        BaseComponent
+    ]
+})
+export class CoreModule {}

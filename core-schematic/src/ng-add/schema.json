@@ -1,0 +1,31 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "id": "simpleSchema",
+  "title": "Creates a simple schematic.",
+  "type": "object",
+  "description": "Says hello to someone",
+  "properties": {
+    "encapsulation": {
+      "type": "boolean",
+      "default": "world",
+      "x-prompt": "Do you want encapsulate base component ?"
+    },
+    "path": {
+      "type": "string",
+      "format": "path",
+      "description": "The path to source folder.",
+      "visible": false
+    },
+    "project": {
+      "type": "string",
+      "description": "The name of the project.",
+      "$default": {
+        "$source": "projectName"
+      }
+    },
+    "additionalProperties": false
+  },
+  "required": [
+    "encapsulation"
+  ]
+}

@@ -1,0 +1,10 @@
+import {Component<% if(!encapsulation) { %>, ViewEncapsulation<% } %>} from '@angular/core';
+
+@Component({
+    templateUrl: 'base.component.html',<% if(!encapsulation) { %>
+    encapsulation: ViewEncapsulation.None<% } %>
+})
+export class BaseComponent {
+
+    constructor() {}
+}
