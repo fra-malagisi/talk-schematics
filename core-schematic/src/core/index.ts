@@ -72,7 +72,7 @@ function addDeclarationToNgModule(): Rule {
   };
 }
 
-export function ngAdd(options: Schema): Rule {
+export function core(options: Schema): Rule {
   return (tree: Tree) => {
     const workspaceConfig = tree.read('/angular.json');
     if (!workspaceConfig) {
@@ -85,6 +85,7 @@ export function ngAdd(options: Schema): Rule {
     // parse workspace string into JSON object
     const workspace: experimental.workspace.WorkspaceSchema = JSON.parse(workspaceContent);
 
+    console.log(workspace);
     if (!options.project) {
       options.project = workspace.defaultProject;
     }

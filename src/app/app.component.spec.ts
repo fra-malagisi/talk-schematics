@@ -19,13 +19,13 @@ describe('AppComponent', () => {
   it(`should have as title 'schematics-hello'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('schematics-ng-add');
+    expect(app.title).toEqual('schematics-core');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('schematics-ng-add app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('schematics-core app is running!');
   });
 });
